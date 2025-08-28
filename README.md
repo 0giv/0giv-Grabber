@@ -16,6 +16,16 @@
   <hr  style="border-radius: 2%; margin-top: 60px; margin-bottom: 60px;"  noshade=""  size="20"  width="100%">
 </div>
 
+
+## About
+
+This is a fork repo of Luna Grabber but the real Luna Grabber had been closed and its owner trying to inject everyone from github. So im making my own Grabber from his Grabber. 
+
+- Real Owner of this idea : Smug246
+
+- Code mostly changed or removed so its not a copy pasting at all. My changed most likely fixing features and adding new features.
+
+
 ## Features
 
 - Discord Info
