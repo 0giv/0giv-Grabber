@@ -1,5 +1,5 @@
 <h1 align="center">
-  0giv Token Grabber
+  0giv Grabber
 </h1>
 
 <div align="center">
