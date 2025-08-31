@@ -23,7 +23,7 @@ This is a fork repo of Luna Grabber but the real Luna Grabber had been closed an
 
 - Real Owner of this idea : Smug246
 
-- Code mostly changed or removed so its not a copy pasting at all. My changed most likely fixing features and adding new features.
+- Code mostly changed or removed so its not a copy pasting at all. My changes most likely fixing features and adding new features.
 
 
 ## Features
