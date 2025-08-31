@@ -1,5 +1,5 @@
 <h1 align="center">
-  Luna Token Grabber
+  0giv Grabber
 </h1>
 
 <div align="center">
