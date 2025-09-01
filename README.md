@@ -30,6 +30,7 @@ This is a fork repo of Luna Grabber but the real Luna Grabber had been closed an
 
 - FUD function
 
+- Maybe an integrated AI :D
 
 ## Features
 
